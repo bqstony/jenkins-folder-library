@@ -10,9 +10,10 @@ pipeline {
                 echo 'Hello World'
                 script{
                     log.info("Hello groovy")
-                }
-                // Call method
-                shared.doSomeStuff()
+
+                    // Call method
+                    shared.doSomeStuff()
+                }                
             }
         }
     }
