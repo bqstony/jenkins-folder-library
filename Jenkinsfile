@@ -1,6 +1,3 @@
-def log = load "${pwd()}/jenkins/log.groovy"
-def shared = load "${pwd()}/jenkins/shared.groovy"
-
 pipeline {
     agent any
 
@@ -9,9 +6,10 @@ pipeline {
             steps {
                 echo 'Hello World'
                 script{
-                    log.info("Hello groovy")
+                    def log = load "${pwd()}/jenkins/log.groovy"
+                    def shared = load "${pwd()}/jenkins/shared.groovy"
 
-                    // Call method
+                    log.info("Hello groovy")
                     shared.doSomeStuff()
                 }                
             }
