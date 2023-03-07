@@ -7,7 +7,9 @@ pipeline {
         stage('Hello') {
             steps {
                 echo 'Hello World'
-                log.info("Hello groovy")
+                script{
+                    log.info("Hello groovy")
+                }
             }
         }
     }
