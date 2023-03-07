@@ -1,4 +1,3 @@
-def log = load "${pwd()}/jenkins/vars/log.groovy"
 
 pipeline {
     agent any
@@ -9,6 +8,7 @@ pipeline {
                 echo 'Hello World'
                 script{
                     log.info("Hello groovy")
+                    def log = load "${pwd()}/jenkins/vars/log.groovy"
                 }
             }
         }

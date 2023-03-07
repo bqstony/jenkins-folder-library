@@ -1,3 +1,5 @@
-def info(message) {
+void info(message) {
     echo "INFO: ${message}"
 }
+
+return this
