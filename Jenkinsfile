@@ -1,3 +1,5 @@
+@Library('myOneLib') _
+
 pipeline {
     agent any
 
